@@ -15,14 +15,12 @@ def hello():
     return 'Hello World!'
 
 
-
 @bottle.route('/hello/<name>')
 def greet(name='Stranger'):
     if (name=="secret"):
         return 'You guessed it'
     else:
         return template('Hello {{name}}, how are you?', name=name)
-
 
 
 @bottle.route('/login')
